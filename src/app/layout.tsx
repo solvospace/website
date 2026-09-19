@@ -2,7 +2,7 @@ import "./globals.scss";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
-import { ThemeProvider } from "@/src/contexts/theme-context";
+import { ThemeProvider } from "@/contexts/theme-context";
 
 const inter = Inter({
     weight: ["400", "500", "600", "700", "800", "900"],
