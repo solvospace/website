@@ -2,6 +2,7 @@ import "./globals.scss";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import { ThemeProvider } from "@/src/contexts/theme-context";
 
 const inter = Inter({
     weight: ["400", "500", "600", "700", "800", "900"],
@@ -25,7 +26,13 @@ export default function RootLayout({
             className={`${inter.className}`}
         >
             <body>
-                {children}
+                <ThemeProvider
+                    attribute="class"
+                    defaultTheme="system"
+                    enableSystem
+                >
+                    {children}
+                </ThemeProvider>
                 <Analytics />
             </body>
         </html>
