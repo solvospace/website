@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { ThemeProvider } from "@/contexts/theme-context";
+import appSettings from "@/constants/settings.constants";
 
 const inter = Inter({
     weight: ["400", "500", "600", "700", "800", "900"],
@@ -11,8 +12,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-    title: "Solvospace",
-    description: "",
+    title: appSettings.name,
+    description: appSettings.description,
 };
 
 export default function RootLayout({

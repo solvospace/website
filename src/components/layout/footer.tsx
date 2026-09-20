@@ -16,7 +16,7 @@ export function Footer() {
             <p className="items-center">
                 &copy; {currentYear}{" "}
                 <Link
-                    aria-label={"Solvospace"}
+                    aria-label={appSettings.name}
                     className="font-semibold"
                     href={appSettings.links.website}
                     title={appSettings.name}
