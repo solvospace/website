@@ -1,5 +1,6 @@
 "use client";
 
+import appSettings from "@/constants/settings.constants";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
@@ -17,10 +18,10 @@ export function Footer() {
                 <Link
                     aria-label={"Solvospace"}
                     className="font-semibold"
-                    href={"https://solvospace.com"}
-                    title={"Solvospace"}
+                    href={appSettings.links.website}
+                    title={appSettings.name}
                 >
-                    Solvospace
+                    {appSettings.name}
                 </Link>
                 .
             </p>
